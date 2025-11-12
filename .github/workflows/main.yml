@@ -17,6 +17,8 @@ jobs:
 
     - name: Set up Python
       uses: actions/setup-python@v3
+      with:
+        python-version: '3.13'
 
     - name: Install pio and its dependencies
       run: |
