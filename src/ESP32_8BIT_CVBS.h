@@ -3,11 +3,11 @@
 
 #include <M5GFX.h>
 
-class LGFX_8BIT_CVBS : public lgfx::LGFX_Device {
+class ESP32_8BIT_CVBS : public lgfx::LGFX_Device {
 public:
   lgfx::Panel_CVBS _panel_instance;
 
-  LGFX_8BIT_CVBS(void) {
+  ESP32_8BIT_CVBS(void) {
     {                                       // Configure display panel control settings
       auto cfg = _panel_instance.config();  // Gets the structure for display panel settings
 
@@ -37,7 +37,7 @@ public:
       cfg.signal_type = cfg.signal_type_t::NTSC_J;
 
       // GPIO number of output destination settings
-      cfg.pin_dac = 25;  // For using DAC, you can choose only 25 or 26
+      cfg.pin_dac = 26;  // For using DAC, you can choose only 25 or 26
 
       // PSRAM memory allocation settings
       cfg.use_psram = 0;  // 0=PSRAM not used / 1=Half PSRAM and half SRAM / 2=All using PSRAM

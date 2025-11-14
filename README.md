@@ -1,1 +1,1 @@
-# LGFX_CVBS_template 
+# ESP32_8BIT_CVBS_template 
